@@ -1,0 +1,99 @@
+{% extends 'base.html' %} {% block body %}
+
+<div class="px-4 pt-5 my-5 text-center border-bottom">
+  <h1 class="display-4 fw-bold">Predict Your Sales</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">
+      Analyses Sales Data and predicts the profit furthermore. An app that
+      visualises sales data across regions, products and time periods. Users can
+      view data to analyze trends, spot high-performing products and track sales
+      growth. It provides interactive bar charts, line graphs and heat maps to
+      highlight areas of success and potential improvement
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      <a href="{{url_for('machine')}}">
+        <button
+          type="button"
+          class="btn btn-primary btn-lg px-4 me-sm-3"
+          fdprocessedid="lykgv"
+        >
+          Go to Visualiser
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="overflow-hidden" style="max-height: 30vh">
+    <div class="container px-5">
+      <img
+        src="./static/moving-van.jpg"
+        class="img-fluid border rounded-3 shadow-lg mb-4"
+        alt="Example image"
+        width="700"
+        height="500"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</div>
+<div class="container px-4 py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom">Why Sales Visualiser?</h2>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div class="feature-icon bg-primary bg-gradient">
+        <img src="./static/briefcase.svg" alt="" />
+      </div>
+      <h2>Unlock Your Sales Potential</h2>
+      <p>
+        Understand your sales like never before! Our app empowers you to analyze
+        trends, identify top-performing regions and products, and discover
+        opportunities for growth. With clear visualizations and intuitive
+        filters, you can turn complex data into actionable insights
+        effortlessly.
+      </p>
+      <a href="#" class="icon-link">
+        More
+        <svg class="bi" width="1em" height="1em">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon bg-primary bg-gradient">
+        <img src="./static/bus-front.svg" alt="" />
+      </div>
+      <h2>Make Smarter Sales Decisions</h2>
+      <p>
+        Stop guessing and start strategizing! Use our interactive charts and
+        heat maps to gain a clear view of your sales performance. By tracking
+        progress over time and comparing regions or products, you’ll be equipped
+        to make informed decisions that drive success.
+      </p>
+      <a href="#" class="icon-link">
+        More
+        <svg class="bi" width="1em" height="1em">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon bg-primary bg-gradient">
+        <img src="./static/chat-square-heart.svg" alt="" />
+      </div>
+      <h2>Spot Opportunities, Boost Growth</h2>
+      <p>
+        Don’t let hidden potential go unnoticed. Our app highlights areas of
+        success and improvement, helping you focus on what matters. Whether
+        you’re tracking trends or evaluating performance, the powerful
+        visualizations ensure you’re always a step ahead.
+      </p>
+      <a href="#" class="icon-link">
+        More
+        <svg class="bi" width="1em" height="1em">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  {% endblock body %}
+</div>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Components</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .feature-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        color: #fff;
+        border-radius: 0.75rem;
+      }
+
+      .navbar {
+        background-color: #333; /* Lighter dark shade for navbar */
+      }
+
+      .navbar-brand,
+      .nav-link,
+      .dropdown-item,
+      .navbar-toggler-icon {
+        color: #fff !important; /* White text */
+      }
+
+      .navbar-brand img {
+        filter: invert(1); /* Makes the SVG white */
+      }
+
+      .nav-link:hover,
+      .dropdown-item:hover {
+        color: #00d4ff !important; /* Highlight effect */
+      }
+
+      .gradi {
+        background: linear-gradient(180deg, #ffdee9 0%, #b5fffc 100%);
+        background-attachment: fixed;
+        min-height: 100vh;
+      }
+
+      .form-control {
+        border-radius: 2rem;
+      }
+
+      .btn-outline-success {
+        border-radius: 2rem;
+        color: white;
+        border-color: white;
+      }
+
+      .btn-outline-success:hover {
+        background-color: #00d4ff;
+        color: black;
+      }
+
+      .dropdown-menu {
+        background-color: #333; /* Matches the navbar */
+      }
+
+      .dropdown-divider {
+        border-top: 1px solid #555; /* Subtle divider */
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+
+  <body class="title gradi">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="./static/box-seam.svg" alt="box" height="30" />
+          Sales Visualiser App
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{{url_for('home')}}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('machine')}}"
+                >Machine Learning</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Bar Graph</a></li>
+                <li><a class="dropdown-item" href="#">Heat Map</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    {% block body %} {% endblock body %}
+  </body>
+</html>
